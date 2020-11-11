@@ -48,7 +48,8 @@ window.addEventListener("CreateNewFileForDownload", function() {
     if (croI != -1) {
       const nhoI = nhoM.indexOf(e);
       const objToPush = nho[nhoI];
-      objToPush["Address"] = cro[croI]["ADDRESS"] + ", " + cro[croI]["CITY, STATE  ZIP"];
+      objToPush["ADDRESS"] = cro[croI]["ADDRESS"];
+      objToPush["CITY, STATE  ZIP"] = cro[croI]["CITY, STATE  ZIP"];
       foundArr.push(objToPush);
     } else {
       missingArr.push(e);
